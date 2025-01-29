@@ -24,9 +24,9 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
   total_features,
 }) => {
   return (
-    <a
-      href={`/${id}`}
+    <div
       className="block rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white"
+      key={id}
     >
       <div className="relative w-full h-56 md:h-64">
         <img
@@ -35,9 +35,11 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           className="w-full h-full object-cover"
           onError={(e) => (e.currentTarget.src = "/fallback-image.jpg")}
         />
-        <span className="absolute top-2 left-2 bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-          {tags}
-        </span>
+        {tags && (
+          <span className="absolute top-2 left-2 bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+            {tags}
+          </span>
+        )}
       </div>
       <div className="p-4 md:p-6">
         <h3 className="text-lg font-semibold text-gray-800">{name}</h3>
@@ -55,7 +57,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           </div>
         </div>
       </div>
-    </a>
+    </div>
   );
 };
 

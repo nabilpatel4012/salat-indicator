@@ -14,14 +14,14 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   alt,
 }) => {
   return (
-    <div className="flex items-start gap-4 border-2 border-slate-300 rounded-lg p-6">
+    <div className="flex items-center gap-4 border-2 border-slate-300 rounded-lg p-6 h-[250px]">
       <span className="shrink-0 rounded-lg bg-gray-100 p-4 mt-auto mb-auto">
         <img src={src} alt={alt} />
       </span>
       <div>
         <h2 className="text-lg font-bold">{heading}</h2>
 
-        <p className="mt-1 text-sm text-gray-600">{paragraph}</p>
+        <p className="mt-1 text-md font-semibold text-gray-600">{paragraph}</p>
       </div>
     </div>
   );

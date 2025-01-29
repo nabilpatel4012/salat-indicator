@@ -40,7 +40,7 @@ const Home = () => {
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               SALAT INDICATOR
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-xl font-semibold leading-8 text-gray-600">
               Elevate your mosque experience with our Salat Indicator.
               Seamlessly guiding congregations through prayer times and the
               Islamic calendar with unparalleled accuracy and clarity.
@@ -50,7 +50,7 @@ const Home = () => {
                 to="/products"
                 className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Go to Collection
+                Our collections
               </Link>
             </div>
             <img src={heroImage} alt="Salat Indicator" className=" hidden" />
@@ -76,11 +76,11 @@ const Home = () => {
         <div className="max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 align-middle gap-10 ">
           <div className="flex justify-center">
             <div className="max-w-xl flex flex-col justify-center text-center">
-              <h2 className="text-3xl font-bold sm:text-4xl">
+              <h2 className="text-4xl font-bold sm:text-5xl">
                 What makes us special
               </h2>
 
-              <p className="mt-4 text-gray-700">
+              <p className="mt-4 text-xl font-semibold text-gray-700">
                 Our Salat Indicators are meticulously crafted for precision in
                 prayer timings and seamless integration with the Islamic
                 calendar. We're dedicated to innovation, constantly
@@ -101,11 +101,11 @@ const Home = () => {
               src="https://img.icons8.com/ios/50/sorting-options--v1.png"
               alt="sorting-options--v1"
               heading="Customizable Alerts"
-              paragraph="Tailor alerts to suit your mosque's schedule, with options for adhan notifications and customizable reminders."
+              paragraph="Tailor alerts to suit your mosque's schedule, with options for adhan notifications and namaz reminders."
             ></FeatureCard>
 
             <FeatureCard
-              src="https://img.icons8.com/hieroglyphs/50/experimental-calendar-hieroglyphs.png"
+              src="https://img.icons8.com/external-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto/50/external-calender-time-and-date-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto.png"
               alt="experimental-calendar-hieroglyphs"
               heading="Integration with Islamic Calendar"
               paragraph="Seamlessly sync with the Islamic calendar to provide accurate dates for important religious events and occasions."
