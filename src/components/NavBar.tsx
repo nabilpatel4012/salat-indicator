@@ -5,9 +5,10 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 
 const navigation = [
+  { name: "Home", href: "/" },
   { name: "Products", href: "/products" },
-  { name: "Features", href: "/#features" },
-  { name: "Company", href: "/company" },
+  { name: "Resources", href: "/resources" },
+  { name: "About", href: "/company" },
 ];
 
 const NavBar = () => {

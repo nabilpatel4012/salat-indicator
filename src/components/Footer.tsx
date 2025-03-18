@@ -9,26 +9,17 @@ const Footer = () => {
         </div>
 
         <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-          consequuntur amet culpa cum itaque neque.
+          Near Chand Tara Masjid, Besides Petrol Pump, Ambajogai Road, Latur -
+          413512
         </p>
 
         <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
           <li>
             <Link
               className="text-gray-700 transition hover:text-gray-700/75"
-              to="/company"
+              to="/"
             >
-              About
-            </Link>
-          </li>
-
-          <li>
-            <Link
-              className="text-gray-700 transition hover:text-gray-700/75"
-              to="/careers"
-            >
-              Careers
+              Home
             </Link>
           </li>
 
@@ -38,6 +29,24 @@ const Footer = () => {
               to="/products"
             >
               Products
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              className="text-gray-700 transition hover:text-gray-700/75"
+              to="/resources"
+            >
+              Resources
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              className="text-gray-700 transition hover:text-gray-700/75"
+              to="/company"
+            >
+              About
             </Link>
           </li>
         </ul>

@@ -1,5 +1,4 @@
 // import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import heroImage from "/display.png";
 import NavBar from "../components/NavBar";
 import { Link } from "react-router-dom";
 import FeatureCard from "../components/FeatureCard";
@@ -24,18 +23,6 @@ const Home = () => {
           />
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              {/* <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                SALAT INDICATOR
-              </h1> */}
-              {/* Announcing our next round of funding.{" "} */}
-              <a href="/company" className="font-semibold text-indigo-600">
-                <span className="absolute inset-0" aria-hidden="true" />
-                Learn More <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               SALAT INDICATOR
@@ -45,15 +32,14 @@ const Home = () => {
               Seamlessly guiding congregations through prayer times and the
               Islamic calendar with unparalleled accuracy and clarity.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className="mt-10 flex items-center justify-center gap-x-6 rounded-full">
               <Link
                 to="/products"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-full bg-indigo-600 px-7 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Our collections
+                Our products
               </Link>
             </div>
-            <img src={heroImage} alt="Salat Indicator" className=" hidden" />
           </div>
         </div>
         <div
@@ -69,6 +55,7 @@ const Home = () => {
           />
         </div>
       </div>
+
       <section
         id="features"
         className="text-gray-900 max-h-full flex align-middle justify-center"
@@ -131,6 +118,37 @@ const Home = () => {
               heading="Affordability"
               paragraph="We believe in providing cost-effective solutions without compromising on quality, making our Salat Indicators accessible to mosques of all sizes."
             ></FeatureCard>
+          </div>
+        </div>
+      </section>
+      <section
+        id="about-us"
+        className="text-gray-900 px-6 py-12 sm:py-16 lg:py-20"
+      >
+        <div className="max-w-screen-xl mx-auto text-center">
+          <h2 className="text-4xl font-bold sm:text-5xl">About Us</h2>
+          <p className="mt-4 text-xl font-semibold text-gray-700">
+            At Mercury STAR Salat Indicator, we specialize in manufacturing
+            high-quality Namaz Time Indicators designed for mosques, offices,
+            and homes. Our innovative products ensure that users can easily keep
+            track of prayer times, fostering a deeper connection to their faith.
+            With a commitment to precision and reliability, our indicators are
+            equipped with advanced technology to provide accurate prayer times
+            based on specific geographical locations.
+          </p>
+          <div className="mt-8 flex justify-center">
+            <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+              <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                {/* <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                SALAT INDICATOR
+              </h1> */}
+                {/* Announcing our next round of funding.{" "} */}
+                <a href="/company" className="font-semibold text-indigo-600">
+                  <span className="absolute inset-0" aria-hidden="true" />
+                  Learn More <span aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

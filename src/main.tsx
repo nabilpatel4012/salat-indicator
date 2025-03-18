@@ -8,6 +8,8 @@ import { Provider } from "react-redux";
 import store from "./store/store.ts";
 import ProductDetailPage from "./pages/ProductDetails.tsx";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import { Company } from "./pages/Company.tsx";
+import Resources from "./pages/Resources.tsx";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
   {
     path: "/products",
     Component: Products,
+  },
+  {
+    path: "/company",
+    Component: Company,
+  },
+  {
+    path: "/resources",
+    Component: Resources,
   },
   {
     path: "/products/:id",
