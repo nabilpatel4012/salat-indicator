@@ -10,6 +10,8 @@ import {
   SwatchIcon,
   ClipboardDocumentIcon,
   XMarkIcon,
+  PhoneIcon,
+  EnvelopeIcon,
 } from "@heroicons/react/24/outline";
 
 const ProductDetailPage: React.FC = () => {
@@ -61,9 +63,9 @@ const ProductDetailPage: React.FC = () => {
 
   return (
     data && (
-      <div className="mt-10 text-gray-800">
+      <>
         <NavBar />
-        <div className="container mx-auto px-6 py-16 min-h-dvh">
+        <div className="container mx-auto px-6 mt-20 py-8 min-h-dvh">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {/* Left Section: Image Slider + Thumbnails */}
             <div className="flex flex-col space-y-6">
@@ -127,7 +129,7 @@ const ProductDetailPage: React.FC = () => {
             {/* Right Section: Product Details */}
             <div className="space-y-6">
               <div className="flex justify-between items-center">
-                <h1 className="text-5xl font-extrabold text-gray-900">
+                <h1 className="text-4xl font-extrabold text-gray-900">
                   {data.name}
                 </h1>
                 {data.tags && (
@@ -407,51 +409,6 @@ const ProductDetailPage: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Specifications Accordion */}
-                {/* <div className="border-b overflow-hidden">
-                  <button
-                    className="w-full flex justify-between items-center p-4 text-left"
-                    onClick={() => toggleAccordion("specifications")}
-                  >
-                    <span className="capitalize text-xl font-semibold">
-                      Specifications
-                    </span>
-                    <img
-                      width="20"
-                      height="20"
-                      className={`${chevronIconClass} ${
-                        openAccordion === "specifications"
-                          ? "rotate-180"
-                          : "rotate-0"
-                      }`}
-                      src="https://img.icons8.com/material-rounded/50/chevron-down.png"
-                      alt="chevron"
-                    />
-                  </button>
-                  <div
-                    className={accordionContentClass}
-                    style={{
-                      maxHeight:
-                        openAccordion === "specifications" ? "1000px" : "0px",
-                    }}
-                  >
-                    <div className="p-4">
-                      <ul className="list-none space-y-2">
-                        {data.specifications_list
-                          ?.split(",")
-                          .map((spec: string, index: number) => (
-                            <li
-                              key={index}
-                              className="bg-indigo-200 text-black text-sm font-semibold px-3 py-1 rounded-full w-fit"
-                            >
-                              {spec.trim()}
-                            </li>
-                          ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div> */}
-
                 {/* Support Accordion */}
                 <div className="border-b overflow-hidden">
                   <button
@@ -499,7 +456,7 @@ const ProductDetailPage: React.FC = () => {
                           <div className="flex-shrink-0">
                             <svg
                               className="w-6 h-6 text-indigo-600"
-                              xmlns="http://www.w3.org/2000/svg"
+                              xmlns="http so://www.w3.org/2000/svg"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke="currentColor"
@@ -653,48 +610,6 @@ const ProductDetailPage: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Reviews Accordion */}
-                {/* <div className="border-b overflow-hidden">
-                  <button
-                    className="w-full flex justify-between items-center p-4 text-left"
-                    onClick={() => toggleAccordion("reviews")}
-                  >
-                    <span className="capitalize text-xl font-semibold">
-                      Reviews
-                    </span>
-                    <img
-                      width="20"
-                      height="20"
-                      className={`${chevronIconClass} ${
-                        openAccordion === "reviews" ? "rotate-180" : "rotate-0"
-                      }`}
-                      src="https://img.icons8.com/material-rounded/50/chevron-down.png"
-                      alt="chevron"
-                    />
-                  </button>
-                  <div
-                    className={accordionContentClass}
-                    style={{
-                      maxHeight: openAccordion === "reviews" ? "1000px" : "0px",
-                    }}
-                  >
-                    <div className="p-4">
-                      <ul className="list-none space-y-2">
-                        {data.reviews_list
-                          ?.split(",")
-                          .map((review: string, index: number) => (
-                            <li
-                              key={index}
-                              className="bg-indigo-200 text-black text-sm font-semibold px-3 py-1 rounded-full w-fit"
-                            >
-                              {review.trim()}
-                            </li>
-                          ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div> */}
-
                 {/* FAQs Accordion */}
                 <div className="border-b overflow-hidden">
                   <button
@@ -816,7 +731,7 @@ const ProductDetailPage: React.FC = () => {
                               </svg>
                               What is your return policy?
                             </h4>
-                          </div>
+                          </div>{" "}
                           <div className="p-4 bg-gray-50">
                             <p className="text-gray-700">
                               We offer a 30-day return policy for most products.
@@ -861,6 +776,63 @@ const ProductDetailPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
+
+                {/* Technical Specifications Accordion */}
+                <div className="border-b overflow-hidden">
+                  <button
+                    className="w-full flex justify-between items-center p-4 text-left"
+                    onClick={() => toggleAccordion("specifications")}
+                  >
+                    <div className="flex items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                        stroke="currentColor"
+                        className="h-6 w-6 text-indigo-600"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z"
+                        />
+                      </svg>
+
+                      <span className="capitalize text-xl font-semibold ml-2">
+                        Technical Specifications
+                      </span>
+                    </div>
+                    <img
+                      width="20"
+                      height="20"
+                      className={`${chevronIconClass} ${
+                        openAccordion === "specifications"
+                          ? "rotate-180"
+                          : "rotate-0"
+                      }`}
+                      src="https://img.icons8.com/material-rounded/50/chevron-down.png"
+                      alt="chevron"
+                    />
+                  </button>
+                  <div
+                    className={accordionContentClass}
+                    style={{
+                      maxHeight:
+                        openAccordion === "specifications" ? "1000px" : "0px",
+                    }}
+                  >
+                    <div className="p-4">
+                      {data.specification ? (
+                        <p>{data.specification}</p>
+                      ) : (
+                        <p className="text-gray-600">
+                          Oh ho! no data available
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Contact Button */}
@@ -878,8 +850,11 @@ const ProductDetailPage: React.FC = () => {
 
         {/* Contact Modal */}
         {isModalOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-            <div className="bg-white p-6 rounded-lg shadow-lg w-96 relative">
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-100"
+            style={{ zIndex: 100 }}
+          >
+            <div className="bg-white p-6 rounded-lg shadow-lg w-2/5 relative">
               <button
                 onClick={() => setIsModalOpen(false)}
                 className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
@@ -887,28 +862,57 @@ const ProductDetailPage: React.FC = () => {
                 <XMarkIcon className="h-6 w-6" />
               </button>
               <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
-              <p className="text-lg mb-4">
-                Email:{" "}
-                <a href="mailto:support@example.com" className="text-blue-500">
-                  support@example.com
-                </a>
-              </p>
-              <p className="text-lg mb-4">
-                Phone: <span className="text-gray-700">(123) 456-7890</span>
-              </p>
-              <p className="text-gray-700">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-2">
+                  <EnvelopeIcon className="h-5 w-5 text-gray-600" />
+                  <p className="text-lg">
+                    Email -{" "}
+                    <a
+                      href="mailto:support@salatindicator.com"
+                      className="text-blue-500 hover:underline"
+                    >
+                      support@salatindicator.com
+                    </a>
+                  </p>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <PhoneIcon className="h-5 w-5 text-gray-600" />
+                  <p className="text-lg">
+                    Phone -{" "}
+                    <a
+                      href="tel:+919767860654"
+                      className="text-blue-500 hover:underline"
+                    >
+                      +91 9767860654
+                    </a>
+                  </p>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <PhoneIcon className="h-5 w-5 text-gray-600" />
+                  <p className="text-lg">
+                    Phone -{" "}
+                    <a
+                      href="tel:+919767860832"
+                      className="text-blue-500 hover:underline"
+                    >
+                      +91 9767860832
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-700 mt-4">
                 For any inquiries, please reach out via phone or email.
               </p>
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="mt-4 w-full bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-500 transition"
+                className="mt-6 w-full bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-500 transition"
               >
                 Close
               </button>
             </div>
           </div>
         )}
-      </div>
+      </>
     )
   );
 };

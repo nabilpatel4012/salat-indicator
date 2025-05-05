@@ -8,6 +8,8 @@ import {
   ClockIcon,
   ArrowPathIcon,
   XMarkIcon,
+  PhoneIcon,
+  EnvelopeIcon,
 } from "@heroicons/react/24/outline";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -18,7 +20,7 @@ export const Resources = () => {
   return (
     <div className="bg-zinc-100 text-gray-900">
       <NavBar />
-      <div className="px-6 py-12 sm:py-16 lg:py-20 max-w-screen-xl mx-auto">
+      <div className="px-6 py-8 sm:py-8 lg:py-12 max-w-screen-xl mx-auto mt-20">
         <div className="text-center">
           <h1 className="text-5xl font-bold text-black-700">Resources</h1>
           <p className="mt-6 text-xl font-medium text-gray-700 max-w-3xl mx-auto">
@@ -106,16 +108,16 @@ export const Resources = () => {
                   team is available to assist you with any questions or
                   concerns.
                 </p>
-                <div className="mt-4 flex flex-col sm:flex-row gap-4">
+                <div className="mt-4 flex flex-col sm:flex-row gap-4 ">
                   <button
                     onClick={() => setIsModalOpen(true)}
-                    className="inline-flex items-center justify-center rounded-md bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
+                    className="inline-flex items-center justify-center  bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 rounded-full"
                   >
                     Contact Support
                   </button>
                   <Link
                     to="/products"
-                    className="inline-flex items-center justify-center rounded-md bg-white px-5 py-2.5 text-sm font-semibold text-indigo-600 shadow-sm border border-indigo-200 hover:bg-indigo-50"
+                    className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-indigo-600 shadow-sm border border-indigo-200 hover:bg-indigo-50"
                   >
                     View Products
                   </Link>
@@ -127,8 +129,11 @@ export const Resources = () => {
 
         {/* Contact Modal */}
         {isModalOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-            <div className="bg-white p-6 rounded-lg shadow-lg w-96 relative">
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-100"
+            style={{ zIndex: 100 }}
+          >
+            <div className="bg-white p-6 rounded-lg shadow-lg w-2/5 relative">
               <button
                 onClick={() => setIsModalOpen(false)}
                 className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
@@ -136,24 +141,50 @@ export const Resources = () => {
                 <XMarkIcon className="h-6 w-6" />
               </button>
               <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
-              <p className="text-lg mb-4">
-                Email:{" "}
-                <a
-                  href="mailto:support@mercury-star.com"
-                  className="text-blue-500"
-                >
-                  support@mercury-star.com
-                </a>
-              </p>
-              <p className="text-lg mb-4">
-                Phone: <span className="text-gray-700">(+91) 987-654-3210</span>
-              </p>
-              <p className="text-gray-700">
+              <div className="space-y-4">
+                <div className="flex items-center space-x-2">
+                  <EnvelopeIcon className="h-5 w-5 text-gray-600" />
+                  <p className="text-lg">
+                    Email -{" "}
+                    <a
+                      href="mailto:support@salatindicator.com"
+                      className="text-blue-500 hover:underline"
+                    >
+                      support@salatindicator.com
+                    </a>
+                  </p>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <PhoneIcon className="h-5 w-5 text-gray-600" />
+                  <p className="text-lg">
+                    Phone -{" "}
+                    <a
+                      href="tel:+919767860654"
+                      className="text-blue-500 hover:underline"
+                    >
+                      +91 9767860654
+                    </a>
+                  </p>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <PhoneIcon className="h-5 w-5 text-gray-600" />
+                  <p className="text-lg">
+                    Phone -{" "}
+                    <a
+                      href="tel:+919767860832"
+                      className="text-blue-500 hover:underline"
+                    >
+                      +91 9767860832
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-700 mt-4">
                 For any inquiries, please reach out via phone or email.
               </p>
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="mt-4 w-full bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-500 transition"
+                className="mt-6 w-full bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-500 transition"
               >
                 Close
               </button>

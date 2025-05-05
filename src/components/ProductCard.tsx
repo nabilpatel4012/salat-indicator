@@ -25,7 +25,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
 }) => {
   return (
     <div
-      className="block rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white"
+      className="block rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white border pt-5"
       key={id}
     >
       <div className="relative w-full h-56 md:h-64">
