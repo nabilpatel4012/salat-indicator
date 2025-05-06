@@ -73,7 +73,7 @@ const Footer = () => {
 
           <li>
             <a
-              href="#"
+              href="https://www.instagram.com/salatindicator/"
               rel="noreferrer"
               target="_blank"
               className="text-gray-700 transition hover:text-gray-700/75"
@@ -88,7 +88,7 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="https://wa.me/+919767860654"
               rel="noreferrer"
               target="_blank"
               className="text-gray-700 transition hover:text-gray-700/75"
@@ -103,7 +103,7 @@ const Footer = () => {
           </li>
           <li>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/asif-khan-ruikar-2a5b38101"
               rel="noreferrer"
               target="_blank"
               className="text-gray-700 transition hover:text-gray-700/75"

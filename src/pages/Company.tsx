@@ -24,8 +24,7 @@ export const Company = () => {
         <p className="mt-6 text-lg font-medium text-gray-700 max-w-3xl mx-auto">
           At Mercury STAR, we are dedicated to crafting high-quality Namaz Time
           Indicators for mosques, offices, and homes, ensuring precise and
-          reliable prayer time tracking to enhance spiritual practices
-          worldwide.
+          reliable prayer time tracking to enhance spiritual practices.
         </p>
 
         {/* Company Overview */}
@@ -75,7 +74,7 @@ export const Company = () => {
               <div>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Expanding access to accurate prayer timing solutions for
-                  individuals and communities worldwide, fostering a global
+                  individuals and communities countrywide, fostering a
                   connection to faith.
                 </p>
               </div>
@@ -169,18 +168,18 @@ export const Company = () => {
         {/* Global Impact Section */}
         <div className="mt-16 max-w-4xl mx-auto text-left">
           <h2 className="text-3xl font-bold text-gray-900 text-center">
-            Our Global Impact
+            Our Impact
           </h2>
           <div className="mt-6 flex flex-col space-y-6">
             <div className="flex items-start space-x-4">
               <GlobeAltIcon className="h-8 w-8 text-indigo-600" />
               <div>
                 <h3 className="text-xl font-semibold text-gray-900">
-                  Worldwide Reach
+                  Countrywide Reach
                 </h3>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Serving over 50 countries, our Namaz Time Indicators are
-                  trusted by mosques, businesses, and households globally.
+                  Serving multiple states, our Namaz Time Indicators are trusted
+                  by mosques, businesses, and households nationally.
                 </p>
               </div>
             </div>
@@ -218,9 +217,7 @@ export const Company = () => {
                 "The Mercury STAR Salat Indicator has transformed our mosque's
                 prayer scheduling. It's accurate, reliable, and easy to use!"
               </p>
-              <p className="mt-4 text-gray-900 font-semibold">
-                - Imam Ahmed, Community Mosque
-              </p>
+              <p className="mt-4 text-gray-900 font-semibold">- Imam</p>
             </div>
             <div className="p-6 bg-white shadow-lg rounded-xl">
               <div className="flex items-center mb-4">
@@ -232,11 +229,9 @@ export const Company = () => {
               </div>
               <p className="text-gray-600 italic">
                 "Excellent product and outstanding customer support. The team
-                helped us customize our office's prayer time display perfectly."
+                helped us follow our prayer times perfectly."
               </p>
-              <p className="mt-4 text-gray-900 font-semibold">
-                - Sarah Khan, Office Manager
-              </p>
+              <p className="mt-4 text-gray-900 font-semibold">- Imam Sadar</p>
             </div>
           </div>
         </div>
